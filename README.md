@@ -1,6 +1,6 @@
 # Circuit Inventory Mangement
 
-Description
+<ins>Description</ins>
 
 Circuit board production for small businesses is a nightmare. Lead times on parts can be
 up to 6 months. This means that if any of the hundred chips, diodes, resistors, or capacitors that
@@ -13,7 +13,7 @@ It is also important that anyone be able to run a ‘build’ and remove parts f
 example of this would be to build an order of 100 boards by automatically removing the total
 number of each part that would be required from the inventory.)
 
-Usage
+<ins>Usage</ins>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To run the jar file type:
 java -cp target/TD-Circuit-Boards-1.0-SNAPSHOT-jar-with-dependencies.jar RestfulServer
@@ -22,7 +22,7 @@ When running to access the RESTful Webserver type into Postman localhost:8080
 To Send data type into the body section using the raw preferance
 The response will be sent back via terminal with STDOUT as well as printed on the main page in HTML
 
-Docker
+<ins>Docker</ins>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To run the program as a Docker container in terminal type:
  
