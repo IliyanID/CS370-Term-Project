@@ -3,8 +3,13 @@ import spark.Spark;
 import spark.Request;
 import spark.Response;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class RestfulServer
 {
+    private final Logger log = LoggerFactory.getLogger(RestfulServer.class);
+
     public RestfulServer()
     {
         this.configureRestfulApiServer();
@@ -36,7 +41,7 @@ public class RestfulServer
 
     private String HttpRequestToJson(Request request)
     {
-        return(
+        /*return(
             "{\n"
             + "\"attributes\":\"" + request.attributes() + "\",\n"
             + "\"body\":\"" + request.body() +"\" \n"
@@ -59,7 +64,10 @@ public class RestfulServer
             + "\"uri\":\"" + request.uri() + "\",\n"
             + "\"url\":\"" + request.url() + "\",\n"
             + "\"userAgent\":\"" + request.userAgent() + "\",\n"
-            + "}");
+            + "}");*/
+
+            log.info(request.body());
+            return "body: " + request.body();
     }
 
     public static void main(String[] args)
