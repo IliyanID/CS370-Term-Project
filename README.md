@@ -24,10 +24,3 @@ The response will be sent back via terminal with STDOUT as well as printed on th
 
 <ins>Docker</ins>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To run the program as a Docker container in terminal type:
- 
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;docker build -t marco/webServer:1.0-SNAPSHOT .
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To run the Docker image type
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;docker run -p 8080:8080 marco/irock:1.0-SNAPSHOT
