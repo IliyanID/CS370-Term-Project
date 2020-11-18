@@ -6,6 +6,8 @@ import spark.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.xml.xpath.XPath;
+
 public class RestfulServer
 {
     private final Logger log = LoggerFactory.getLogger(RestfulServer.class);
@@ -16,11 +18,16 @@ public class RestfulServer
         this.processRestfulApiRequests();
     }
 
-    private void configureRestfulApiServer()
-    {
+
+
+    private void configureRestfulApiServer() {
         Spark.port(8080);
         System.out.println("Server configured to listen on port 8080");
-        Spark.get("/hello", (request, response) -> "Hello World!");
+        Spark.staticFileLocation("/static");
+        /*Spark.get("/hello", (request, response) -> {
+           Spark.staticFileLocation("/static");
+           return "";
+        });*/
     }
 
     private void processRestfulApiRequests()
@@ -31,11 +38,11 @@ public class RestfulServer
 
     private String echoRequest(Request request, Response response)
     {
-        response.type("application/json");
+        response.type("text/html");
         response.header("Access-Control-Allow-Origin","*");
         response.status(200); //Success
 
-        return HttpRequestToJson(request);
+        return "<h1>hello</h1>";
 
     }
 
