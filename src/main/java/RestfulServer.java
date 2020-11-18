@@ -24,10 +24,19 @@ public class RestfulServer
         Spark.port(8080);
         System.out.println("Server configured to listen on port 8080");
         Spark.staticFileLocation("/static");
-        /*Spark.get("/hello", (request, response) -> {
-           Spark.staticFileLocation("/static");
-           return "";
-        });*/
+        Spark.get("/user", "application/json", (request, response)-> {
+            String user = request.queryParams("userName");
+            String pass = request.queryParams("passWord");
+
+            boolean verified = false;
+            if(user.equals("admin") && pass.equals("password"))
+            {
+                verified = true;
+            }
+
+            System.out.println(verified);
+            return verified;
+        });
     }
 
     private void processRestfulApiRequests()
