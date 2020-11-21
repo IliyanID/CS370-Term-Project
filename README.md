@@ -1,5 +1,7 @@
 # Circuit Inventory Mangement
 
+The test login is username: admin;password: password
+
 <ins>Description</ins>
 
 Circuit board production for small businesses is a nightmare. Lead times on parts can be
