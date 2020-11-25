@@ -8,8 +8,11 @@ import org.slf4j.LoggerFactory;
 
 import javax.xml.xpath.XPath;
 
+
+
 public class RestfulServer
 {
+    final static boolean debug = false;
     private final Logger log = LoggerFactory.getLogger(RestfulServer.class);
 
     public RestfulServer()
@@ -23,7 +26,13 @@ public class RestfulServer
     private void configureRestfulApiServer() {
         Spark.port(8080);
         System.out.println("Server configured to listen on port 8080");
-        Spark.staticFileLocation("/static");
+        if(debug)
+        {
+            Spark.staticFileLocation("/static/React-App-Source-Code/public");
+        }
+        else{
+            Spark.staticFileLocation("/static/React-App-Source-Code/build/index.html");
+        }
         Spark.get("/user", "application/json", (request, response)-> {
             String user = request.queryParams("userName");
             String pass = request.queryParams("passWord");
