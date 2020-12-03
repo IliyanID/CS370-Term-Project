@@ -7,7 +7,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="CS370-Term-Project" />
-        <module name="TD-Circuit-Boards" />
         <module name="TD Circuit Boards" />
       </profile>
     </annotationProcessing>
