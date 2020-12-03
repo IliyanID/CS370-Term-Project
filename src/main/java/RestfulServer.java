@@ -31,7 +31,7 @@ public class RestfulServer
             Spark.staticFileLocation("/static/React-App-Source-Code/public");
         }
         else{
-            Spark.staticFileLocation("/static/React-App-Source-Code/build/index.html");
+            Spark.staticFileLocation("/static/build");
         }
         Spark.get("/user", "application/json", (request, response)-> {
             String user = request.queryParams("userName");
