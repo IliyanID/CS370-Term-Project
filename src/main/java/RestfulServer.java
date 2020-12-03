@@ -3,6 +3,8 @@ import spark.Spark;
 import spark.Request;
 import spark.Response;
 
+import java.sql.*;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -31,12 +33,23 @@ public class RestfulServer
             Spark.staticFileLocation("/static/React-App-Source-Code/public");
         }
         else{
-            Spark.staticFileLocation("/static/build");
+            Spark.staticFileLocation("/static/React-App-Source-Code/build/index.html");
+        }
+        System.out.println(":))");
+        ResultSet users =  queryDB( "SELECT users.password " +
+                "FROM sys.users " +
+                "WHERE users.username='rbclark';");
+        try {
+            System.out.println("printing results: ");
+            users.next();
+            System.out.println(users.getString(1));
+            System.out.println("finished");
+        } catch (Exception throwables) {
+            throwables.printStackTrace();
         }
         Spark.get("/user", "application/json", (request, response)-> {
             String user = request.queryParams("userName");
             String pass = request.queryParams("passWord");
-
             boolean verified = false;
             if(user.equals("admin") && pass.equals("password"))
             {
@@ -63,7 +76,25 @@ public class RestfulServer
         return "<h1>hello</h1>";
 
     }
-
+    private ResultSet queryDB(String query)
+    {
+        String url = "jdbc:mysql://localhost:3306/sys";
+        String dbuser = "root";
+        String dbpass = "cs370DBPassword9>1!";
+        ResultSet results = null;
+        try {
+            //Class.forName("com.mysql.jdbc.Driver").newInstance();
+            Connection connection = DriverManager.getConnection(url, dbuser, dbpass);
+            Statement queryStatement = connection.createStatement();
+            results = queryStatement.executeQuery(query);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+            System.out.println(":(");
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+        return results;
+    }
     private String HttpRequestToJson(Request request)
     {
         /*return(
@@ -97,6 +128,7 @@ public class RestfulServer
 
     public static void main(String[] args)
     {
+
         RestfulServer restfulServer = new RestfulServer(); //This should never return.
     }
 
