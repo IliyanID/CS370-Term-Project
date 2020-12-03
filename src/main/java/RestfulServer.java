@@ -3,6 +3,8 @@ import spark.Spark;
 import spark.Request;
 import spark.Response;
 
+import java.sql.*;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -63,7 +65,25 @@ public class RestfulServer
         return "<h1>hello</h1>";
 
     }
-
+    private ResultSet queryDB(String query)
+    {
+        String url = "jdbc:mysql://localhost:3306/sys";
+        String dbuser = "root";
+        String dbpass = "cs370DBPassword9>1!";
+        ResultSet results = null;
+        try {
+            //Class.forName("com.mysql.jdbc.Driver").newInstance();
+            Connection connection = DriverManager.getConnection(url, dbuser, dbpass);
+            Statement queryStatement = connection.createStatement();
+            results = queryStatement.executeQuery(query);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+            System.out.println(":(");
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+        return results;
+    }
     private String HttpRequestToJson(Request request)
     {
         /*return(
