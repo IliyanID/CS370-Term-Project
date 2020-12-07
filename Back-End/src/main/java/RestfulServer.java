@@ -42,14 +42,16 @@ public class RestfulServer
         post("/user", "application/json", this::authenticateUser);
 
 
+
         //Get all Inventory for User
         get("/inventory","application/json", this::getInventory);
+        get("/inventory/:index",this::getInventory);
 
         //api for usernames
-        get("/username",this::getEmails);
-        get("/username/:index",this::getEmails);
-        post("/username",this::addEmail);
-        delete("/username/:index",this::deleteEmail);
+        get("/username",this::getUser);
+        get("/username/:user",this::getUser);
+        post("/username",this::addUser);
+        delete("/username/:user",this::deleteUser);
 
 
 
@@ -74,7 +76,7 @@ public class RestfulServer
 
         JSONObject authenticated = new JSONObject();
 
-        String
+
         String user = request.queryParams("username");
         String pass = request.queryParams("password");
 
@@ -100,14 +102,24 @@ public class RestfulServer
         response.status(200); //Success
 
 
-        String user = request.params("user");
+        String index = request.params("index");
+
 
         JSONArray allInventory = new JSONArray();
+        if(index == null)
         for(int i = 0; i< 20;i++)
-        {
+            {
+             JSONObject item = new JSONObject();
+             item.put("description","Name of Board and Components");
+             item.put("id",i);
+             item.put("displayed",false);
+              item.put("url","");
+               allInventory.put(item);
+            }
+        else{
             JSONObject item = new JSONObject();
             item.put("description","Name of Board and Components");
-            item.put("id",i);
+            item.put("id",index);
             item.put("displayed",false);
             item.put("url","");
             allInventory.put(item);
@@ -118,53 +130,54 @@ public class RestfulServer
 
 
 
-    private JSONArray getEmails(Request request,Response response){
+    private JSONArray getUser(Request request,Response response){
         response.type("application/json");
         response.header("Access-Control-Allow-Origin","*");
         response.status(200); //Success
 
-        int index = Integer.valueOf(request.params(":index"));
+        String username = request.params(":user");
 
         JSONArray allEmails = new JSONArray();
-        if(index < 0)
+        if(username == null)
         {
             for(int i = 0; i< 10;i ++)
             {
                 JSONObject email = new JSONObject();
-                email.put("Email", i);
+                email.put("Username", i);
                 allEmails.put(email);
             }
         }
         else{
             JSONObject email = new JSONObject();
-            email.put("EmailIndex",index);
+            email.put("Username",username);
+            email.put("Password","password");
             allEmails.put(email);
         }
         return allEmails;
     }
-    private JSONObject addEmail(Request request,Response response){
+    private JSONObject addUser(Request request,Response response){
         response.type("application/json");
         response.header("Access-Control-Allow-Origin","*");
         response.status(200); //Success
 
-        String email = request.params("email");
+        String User = request.body();
 
         JSONObject success = new JSONObject();
         success.put("success",true);
         success.put("index",0);
-        success.put("email",email);
+        success.put("User",User);
         return success;
     }
-    private JSONObject deleteEmail(Request request,Response response){
+    private JSONObject deleteUser(Request request,Response response){
         response.type("application/json");
         response.header("Access-Control-Allow-Origin","*");
         response.status(200); //Success
 
+        String username = request.params("user");
 
         JSONObject success = new JSONObject();
         success.put("success",true);
-        success.put("index",request.params(":index"));
-        success.put("emailDeleted","testEmail");
+        success.put("UserDeleted",username);
 
         return success;
     }
