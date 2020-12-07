@@ -1,3 +1,4 @@
+
 import spark.Spark.*;
 import spark.Spark;
 import spark.Request;
@@ -6,8 +7,10 @@ import spark.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.xml.xpath.XPath;
+import static spark.Spark.*;
 
+
+import org.json.*;
 
 
 public class RestfulServer
@@ -26,33 +29,148 @@ public class RestfulServer
     private void configureRestfulApiServer() {
         Spark.port(8080);
         System.out.println("Server configured to listen on port 8080");
-        if(debug)
-        {
-            Spark.staticFileLocation("/static/React-App-Source-Code/public");
-        }
-        else{
-            Spark.staticFileLocation("/static/React-App-Source-Code/build/index.html");
-        }
-        Spark.get("/user", "application/json", (request, response)-> {
-            String user = request.queryParams("userName");
-            String pass = request.queryParams("passWord");
 
-            boolean verified = false;
-            if(user.equals("admin") && pass.equals("password"))
-            {
-                verified = true;
-            }
+        Spark.staticFileLocation("/static/React-App-Source-Code/build/index.html");
 
-            System.out.println(verified);
-            return verified;
-        });
+
     }
 
     private void processRestfulApiRequests()
     {
-        Spark.get("/",this::echoRequest);
+
+        //API for Users
+        post("/user", "application/json", this::authenticateUser);
+
+
+        //Get all Inventory for User
+        get("/inventory","application/json", this::getInventory);
+
+        //api for usernames
+        get("/username",this::getEmails);
+        get("/username/:index",this::getEmails);
+        post("/username",this::addEmail);
+        delete("/username/:index",this::deleteEmail);
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //Spark.get("/",this::echoRequest);
 
     }
+    private JSONObject authenticateUser(Request request, Response response){
+        response.type("application/json");
+        response.header("Access-Control-Allow-Origin","*");
+        response.status(200); //Success
+
+
+        JSONObject authenticated = new JSONObject();
+
+        String
+        String user = request.queryParams("username");
+        String pass = request.queryParams("password");
+
+
+        boolean verified = false;
+        if(user != null && pass != null)
+            if(user.equals("admin") && pass.equals("password"))
+            verified = true;
+
+        System.out.println(request.body());
+
+        authenticated.put("authenticated",verified);
+        authenticated.put("userToken",0);
+        return authenticated;
+    }
+
+
+
+
+    private JSONArray getInventory(Request request, Response response){
+        response.type("application/json");
+        response.header("Access-Control-Allow-Origin","*");
+        response.status(200); //Success
+
+
+        String user = request.params("user");
+
+        JSONArray allInventory = new JSONArray();
+        for(int i = 0; i< 20;i++)
+        {
+            JSONObject item = new JSONObject();
+            item.put("description","Name of Board and Components");
+            item.put("id",i);
+            item.put("displayed",false);
+            item.put("url","");
+            allInventory.put(item);
+        }
+        return allInventory;
+    }
+
+
+
+
+    private JSONArray getEmails(Request request,Response response){
+        response.type("application/json");
+        response.header("Access-Control-Allow-Origin","*");
+        response.status(200); //Success
+
+        int index = Integer.valueOf(request.params(":index"));
+
+        JSONArray allEmails = new JSONArray();
+        if(index < 0)
+        {
+            for(int i = 0; i< 10;i ++)
+            {
+                JSONObject email = new JSONObject();
+                email.put("Email", i);
+                allEmails.put(email);
+            }
+        }
+        else{
+            JSONObject email = new JSONObject();
+            email.put("EmailIndex",index);
+            allEmails.put(email);
+        }
+        return allEmails;
+    }
+    private JSONObject addEmail(Request request,Response response){
+        response.type("application/json");
+        response.header("Access-Control-Allow-Origin","*");
+        response.status(200); //Success
+
+        String email = request.params("email");
+
+        JSONObject success = new JSONObject();
+        success.put("success",true);
+        success.put("index",0);
+        success.put("email",email);
+        return success;
+    }
+    private JSONObject deleteEmail(Request request,Response response){
+        response.type("application/json");
+        response.header("Access-Control-Allow-Origin","*");
+        response.status(200); //Success
+
+
+        JSONObject success = new JSONObject();
+        success.put("success",true);
+        success.put("index",request.params(":index"));
+        success.put("emailDeleted","testEmail");
+
+        return success;
+    }
+
+
+
 
     private String echoRequest(Request request, Response response)
     {
