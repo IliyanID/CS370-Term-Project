@@ -1,4 +1,4 @@
-import React, {Fragment, useContext} from 'react';
+import React, {Fragment, useContext, useEffect, useState} from 'react';
 import UserContext from '../Context/userContext';
 
 import './LoggedIn.css';
@@ -6,24 +6,32 @@ import InventoryItem from '../Components/InventoryItem/InventoryItem';
 
 
 
-const LoggedIn = (props) =>{
-    const userContext = useContext(UserContext);
 
-    let inventory=[
-        {description:"Name of Board and Components" , id:1 , displayed:false},
-        {description:"Name of Board and Components" , id:2, displayed:false},
-        {description:"Name of Board and Components" , id:3, displayed:false},
-        {description:"Name of Board and Components" , id:4, displayed:false},
-        {description:"Name of Board and Components" , id:13, displayed:false},
-        {description:"Name of Board and Components" , id:14, displayed:false},
-        {description:"Name of Board and Components" , id:15, displayed:false},
-        {description:"Name of Board and Components" , id:16, displayed:false},
-        {description:"Name of Board and Components" , id:17, displayed:false},
-        {description:"Name of Board and Components" , id:18, displayed:false},
-        {description:"Name of Board and Components" , id:19, displayed:false},
-        {description:"Name of Board and Components" , id:"asus" , displayed:false}
-    ];
+const LoggedIn = (props) =>{
+    const [count, setCount] = useState([{inventory:{description:"",id:"",displayed:false,url:"",username:""}}]);
+
+    useEffect(() => {
+        getInventory();
+      });
+
+
+      const getInventory = () =>{
     
+
+        const Http = new XMLHttpRequest();
+        let url = "http://10.0.0.108:80/inventory";
+        Http.open("GET",url);
+        Http.send();
+        Http.onreadystatechange = (e) => {
+          //console.log(JSON.parse(Http.response));
+         setCount({inventory:JSON.parse(Http.response)})
+        }
+    }
+
+    const userContext = count.inventory
+
+    let inventory=count
+    console.log(inventory);
     //console.log(currentSearch,currentSearch.join(' '));
 
     let selectedInventory = inventory.map(item =>{
