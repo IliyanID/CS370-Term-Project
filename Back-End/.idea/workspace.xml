@@ -1,85 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ArtifactsWorkspaceSettings">
-    <artifacts-to-build>
-      <artifact name="unnamed" />
-    </artifacts-to-build>
-  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="21a3cfbc-014e-44ba-a561-f52140b4817d" name="Default Changelist" comment="">
+    <list default="true" id="0c8d36c7-cf2d-41fb-9b79-745615e013c3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/React-App-Source-Code/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/React-App-Source-Code/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/React-App-Source-Code/src/Containers/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/React-App-Source-Code/src/Containers/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/React-App-Source-Code/src/Containers/LoggedIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/React-App-Source-Code/src/Containers/LoggedIn.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RestfulServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RestfulServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/React-App-Source-Code/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/React-App-Source-Code/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/React-App-Source-Code/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/React-App-Source-Code/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/React-App-Source-Code/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/React-App-Source-Code/public/logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/React-App-Source-Code/public/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/React-App-Source-Code/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/React-App-Source-Code/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/React-App-Source-Code/src/Components/InventoryItem/InventoryItem.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/React-App-Source-Code/src/Components/InventoryItem/InventoryItem.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/React-App-Source-Code/src/Components/LogInBox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/React-App-Source-Code/src/Components/LoginBox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/React-App-Source-Code/src/Containers/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/React-App-Source-Code/src/Containers/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/React-App-Source-Code/src/Containers/LoggedIn.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/React-App-Source-Code/src/Containers/LoggedIn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/React-App-Source-Code/src/Context/authContext.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/React-App-Source-Code/src/Context/userContext.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/React-App-Source-Code/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/React-App-Source-Code/src/reportWebVitals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/React-App-Source-Code/src/resources/869.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/React-App-Source-Code/src/resources/r1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/React-App-Source-Code/src/resources/r2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/React-App-Source-Code/src/resources/r3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/React-App-Source-Code/src/resources/r4.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CodeStyleSettingsInfer">
-    <option name="done" value="true" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-    <option name="ROOT_SYNC" value="SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -91,23 +29,17 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
-  <component name="ProjectId" id="1jkiTAwdbj6ixKIs61KA2Ni2NQO" />
+  <component name="ProjectId" id="1lOAiMlVMdeIfyrRhL3eYrJqlVd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="restartRequiresConfirmation" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Back-End" />
   </component>
-  <component name="RunManager" selected="Application.RestfulServer">
+  <component name="RunManager">
     <configuration name="RestfulServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="RestfulServer" />
       <module name="Back-End" />
@@ -115,109 +47,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in CS370-Term-Project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CS370-Term-Project" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.RestfulServer" />
-        <item itemvalue="JUnit.All in CS370-Term-Project" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="21a3cfbc-014e-44ba-a561-f52140b4817d" name="Default Changelist" comment="" />
-      <created>1604354496705</created>
+      <changelist id="0c8d36c7-cf2d-41fb-9b79-745615e013c3" name="Default Changelist" comment="" />
+      <created>1607457890155</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1604354496705</updated>
+      <updated>1607457890155</updated>
     </task>
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="1054" y="399" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1604538440623">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1607457905117">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1054" y="399" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604538440623" />
-    <state x="639" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1606513595837">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="639" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606513595837" />
-    <state x="650" y="256" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1604538471123">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="650" y="256" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604538471123" />
-    <state x="1106" y="264" key="FileChooserDialogImpl" timestamp="1607175689111">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="864" y="244" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1606720656897" />
-    <state x="1106" y="264" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607175689111" />
-    <state width="1877" height="203" key="GridCell.Tab.0.bottom" timestamp="1607457691124">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1458" height="184" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1607412242760" />
-    <state width="1877" height="203" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607457691124" />
-    <state width="1877" height="203" key="GridCell.Tab.0.center" timestamp="1607457691124">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1458" height="184" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1607412242760" />
-    <state width="1877" height="203" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607457691124" />
-    <state width="1877" height="203" key="GridCell.Tab.0.left" timestamp="1607457691124">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1458" height="184" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1607412242759" />
-    <state width="1877" height="203" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607457691124" />
-    <state width="1877" height="203" key="GridCell.Tab.0.right" timestamp="1607457691124">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1458" height="184" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1607412242760" />
-    <state width="1877" height="203" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607457691124" />
-    <state width="912" height="346" key="GridCell.Tab.1.bottom" timestamp="1604528088844">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="912" height="346" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604528088844" />
-    <state width="912" height="346" key="GridCell.Tab.1.center" timestamp="1604528088844">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="912" height="346" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604528088844" />
-    <state width="912" height="346" key="GridCell.Tab.1.left" timestamp="1604528088844">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="912" height="346" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604528088844" />
-    <state width="912" height="346" key="GridCell.Tab.1.right" timestamp="1604528088844">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="912" height="346" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604528088844" />
-    <state x="805" y="184" key="SettingsEditor" timestamp="1604538488469">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="805" y="184" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1604538488469" />
-    <state x="342" y="141" key="new project wizard" timestamp="1606720663961">
-      <screen x="0" y="0" width="1500" height="960" />
-    </state>
-    <state x="342" y="141" key="new project wizard/0.0.1500.960@0.0.1500.960" timestamp="1606720663961" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1607377256029">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607377256029" />
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607457905117" />
   </component>
 </project>
