@@ -80,6 +80,20 @@ public class RestfulServer
 
         JSONObject authenticated = new JSONObject();
         boolean verified = false;
+        ResultSet users = queryDB("SELECT users.password FROM sys.users WHERE users.username=\"" + user + "\";");
+        try {
+            System.out.println("printing results: ");
+            if (users.next()) {
+                String storedpass = users.getString(1);
+                if (pass.equals(storedpass))
+                    verified = true;
+            } else {
+                System.err.println("User " + user + " does not exist");
+            }
+        } catch (Exception throwables) {
+            throwables.printStackTrace();
+        }
+        
         if(user != null && pass != null)
             if(user.equals("admin") && pass.equals("password"))
             verified = true;
@@ -90,7 +104,6 @@ public class RestfulServer
         authenticated.put("userToken",0);
         return authenticated;
     }
-
 
 
 
