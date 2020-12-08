@@ -32,27 +32,8 @@ public class RestfulServer
 
         Spark.staticFileLocation("/static/React-App-Source-Code/build/index.html");
 
-        String user = "rbclark";
-        String pass = "rbclarkPass";
 
-        boolean verified = false;
-        ResultSet users = queryDB("SELECT users.password FROM sys.users WHERE users.username=\"" + user + "\";");
-        try {
-            System.out.println("printing results: ");
-            if (users.next()) {
-                String storedpass = users.getString(1);
-                if (pass.equals(storedpass))
-                    verified = true;
-            } else {
-                System.err.println("User " + user + " does not exist");
-            }
-        } catch (Exception throwables) {
-            throwables.printStackTrace();
-        }
-        if (user != null && pass != null)
-            if (user.equals("admin") && pass.equals("password"))
-                verified = true;
-        System.out.println(verified);
+
     }
     private void processRestfulApiRequests()
     {
@@ -97,26 +78,23 @@ public class RestfulServer
         String pass = request.queryParams("password");
 
         boolean verified = false;
-        ResultSet users =  queryDB( "SELECT users.password" +
-                "FROM sys.users " +
-                "WHERE users.username='" + user + "';");
+        ResultSet users = queryDB("SELECT users.password FROM sys.users WHERE users.username=\"" + user + "\";");
         try {
             System.out.println("printing results: ");
-            if(users.next()) {
+            if (users.next()) {
                 String storedpass = users.getString(1);
-                if(pass.equals(storedpass))
+                if (pass.equals(storedpass))
                     verified = true;
-            }
-            else
-            {
+            } else {
                 System.err.println("User " + user + " does not exist");
             }
         } catch (Exception throwables) {
             throwables.printStackTrace();
         }
-        if(user != null && pass != null)
-            if(user.equals("admin") && pass.equals("password"))
-            verified = true;
+        if (user != null && pass != null)
+            if (user.equals("admin") && pass.equals("password"))
+                verified = true;
+        //System.out.println(verified);
 
         System.out.println(request.body());
 
