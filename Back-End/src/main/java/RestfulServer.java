@@ -31,9 +31,6 @@ public class RestfulServer
         System.out.println("Server configured to listen on port 8080");
 
         Spark.staticFileLocation("/static/React-App-Source-Code/build/index.html");
-
-
-
     }
     private void processRestfulApiRequests()
     {
@@ -133,14 +130,19 @@ public class RestfulServer
         String user = request.params("user");
 
         JSONArray allInventory = new JSONArray();
-        for(int i = 0; i< 20;i++)
-        {
-            JSONObject item = new JSONObject();
-            item.put("description","Name of Board and Components");
-            item.put("id",i);
-            item.put("displayed",false);
-            item.put("url","");
-            allInventory.put(item);
+        ResultSet inventory = queryDB("SELECT inventory.description, inventory.id, inventory.imageurl FROM sys.inventory WHERE inventory.user='" + user + "';");
+        try {
+            while (inventory.next()) {
+                JSONObject item = new JSONObject();
+                item.put("description", inventory.getString("description"));
+                item.put("id",inventory.getString("id"));
+                item.put("displayed",false);
+                item.put("url",inventory.getString("imageurl"));
+                allInventory.put(item);
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
         }
         return allInventory;
     }
