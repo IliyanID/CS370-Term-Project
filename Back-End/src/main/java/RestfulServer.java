@@ -6,7 +6,7 @@ import spark.Response;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
+import java.sql.*;
 import static spark.Spark.*;
 
 
@@ -74,12 +74,28 @@ public class RestfulServer
 
         JSONObject authenticated = new JSONObject();
 
-        String
         String user = request.queryParams("username");
         String pass = request.queryParams("password");
 
 
         boolean verified = false;
+        ResultSet users =  queryDB( "SELECT users.password" +
+                "FROM sys.users " +
+                "WHERE users.username='" + user + "';");
+        try {
+            System.out.println("printing results: ");
+            if(users.next()) {
+                String storedpass = users.getString(1);
+                if(pass.equals(storedpass))
+                    verified = true;
+            }
+            else
+            {
+                System.err.println("User " + user + " does not exist");
+            }
+        } catch (Exception throwables) {
+            throwables.printStackTrace();
+        }
         if(user != null && pass != null)
             if(user.equals("admin") && pass.equals("password"))
             verified = true;
@@ -90,11 +106,29 @@ public class RestfulServer
         authenticated.put("userToken",0);
         return authenticated;
     }
+    private ResultSet queryDB(String query) {
+        String url = "jdbc:mysql://localhost:3306/sys";
+        String dbuser = "root";
+        String dbpass = "cs370DBPassword9>1!";
+        ResultSet results = null;
+        try {
+            //Class.forName("com.mysql.jdbc.Driver").newInstance();
+            Connection connection = DriverManager.getConnection(url, dbuser, dbpass);
+            Statement queryStatement = connection.createStatement();
+            results = queryStatement.executeQuery(query);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+            System.out.println(":(");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return results;
+    }
 
 
 
 
-    private JSONArray getInventory(Request request, Response response){
+        private JSONArray getInventory(Request request, Response response){
         response.type("application/json");
         response.header("Access-Control-Allow-Origin","*");
         response.status(200); //Success
