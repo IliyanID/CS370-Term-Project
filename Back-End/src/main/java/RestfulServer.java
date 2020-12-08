@@ -27,14 +27,33 @@ public class RestfulServer
 
 
     private void configureRestfulApiServer() {
-        Spark.port(8080);
+        Spark.port(8000);
         System.out.println("Server configured to listen on port 8080");
 
         Spark.staticFileLocation("/static/React-App-Source-Code/build/index.html");
 
+        String user = "rbclark";
+        String pass = "rbclarkPass";
 
+        boolean verified = false;
+        ResultSet users = queryDB("SELECT users.password FROM sys.users WHERE users.username=\"" + user + "\";");
+        try {
+            System.out.println("printing results: ");
+            if (users.next()) {
+                String storedpass = users.getString(1);
+                if (pass.equals(storedpass))
+                    verified = true;
+            } else {
+                System.err.println("User " + user + " does not exist");
+            }
+        } catch (Exception throwables) {
+            throwables.printStackTrace();
+        }
+        if (user != null && pass != null)
+            if (user.equals("admin") && pass.equals("password"))
+                verified = true;
+        System.out.println(verified);
     }
-
     private void processRestfulApiRequests()
     {
 
@@ -76,7 +95,6 @@ public class RestfulServer
 
         String user = request.queryParams("username");
         String pass = request.queryParams("password");
-
 
         boolean verified = false;
         ResultSet users =  queryDB( "SELECT users.password" +
