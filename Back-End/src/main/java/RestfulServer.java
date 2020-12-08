@@ -80,7 +80,7 @@ public class RestfulServer
 
         JSONObject authenticated = new JSONObject();
         boolean verified = false;
-        ResultSet users = queryDB("SELECT users.password FROM sys.users WHERE users.username=\"" + user + "\";");
+        ResultSet users = queryDB("SELECT credentials.Password FROM database.users WHERE credentials.Usernames=\"" + user + "\";");
         try {
             System.out.println("printing results: ");
             if (users.next()) {
@@ -112,28 +112,30 @@ public class RestfulServer
         response.header("Access-Control-Allow-Origin","*");
         response.status(200); //Success
 
-
+        String user = request.params("user");
         String index = request.params("index");
 
 
         JSONArray allInventory = new JSONArray();
-        if(index == null)
-        for(int i = 0; i< 20;i++)
-            {
-             JSONObject item = new JSONObject();
-             item.put("description","Name of Board and Components");
-             item.put("id",i);
-             item.put("displayed",false);
-              item.put("url","");
-               allInventory.put(item);
+        ResultSet inventory;
+        if(index==null) {
+            inventory = queryDB("SELECT inventory.description, inventory.id, inventory.url FROM database.inventory WHERE inventory.username='" + user + "';");
+        }
+        else {
+            inventory = queryDB("SELECT inventory.description, inventory.id, inventory.url FROM database.inventory WHERE inventory.username='" + user + "' AND inventory.id='" + index + "';");
+        }
+        try {
+            while (inventory.next()) {
+                JSONObject item = new JSONObject();
+                item.put("description", inventory.getString("description"));
+                item.put("id",inventory.getString("id"));
+                item.put("displayed",false);
+                item.put("url",inventory.getString("imageurl"));
+                allInventory.put(item);
             }
-        else{
-            JSONObject item = new JSONObject();
-            item.put("description","Name of Board and Components");
-            item.put("id",index);
-            item.put("displayed",false);
-            item.put("url","");
-            allInventory.put(item);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
         }
         return allInventory;
     }
