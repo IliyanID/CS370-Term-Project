@@ -89,6 +89,7 @@ public class RestfulServer
                 String storedpass = users.getString("Password");
                 if (pass.equals(storedpass))
                     verified = true;
+                    System.out.println("true");
             } else {
                 System.err.println("User " + user + " does not exist");
             }
@@ -268,7 +269,7 @@ public class RestfulServer
                 }
             }
             catch (Exception throwables) {
-                //throwables.printStackTrace();
+                throwables.printStackTrace();
             }
         }
         else{
@@ -380,7 +381,7 @@ public class RestfulServer
 
 
     private ResultSet queryDB(String query)throws Exception{
-        String url = "jdbc:mysql://localhost:3306/database";
+        String url = "jdbc:mysql://database:3306/database";
         String dbuser = "root";
         String dbpass = "password";
         ResultSet results = null;
