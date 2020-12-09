@@ -1,0 +1,111 @@
+.header{
+    
+    border: 2px #FFF solid;
+    border-radius:20px;
+    padding: 20px;
+    margin:20px;
+    background: linear-gradient(rgba(255,255,255,.6), rgba(255,255,255,.6));
+    text-align: center;
+    list-style-type:none;
+    
+}
+    .headerTitle{
+        font-size: 25px;
+        font-weight:bold;
+        display:inline;
+       
+        padding: 20px;
+               
+    }
+
+    .headerProfile{
+        display:inline;
+        float:right;
+        border:2px solid #FFF;
+        padding:5px;
+        border-radius:20px;
+        background-color:#FFF;
+        cursor:pointer;
+        transition:background-color .5s;
+    }
+    .headerProfile:hover{
+        background-color: #3498db;
+    }
+
+.itemArea{
+
+    min-height: 80vh;
+    margin: 20px;
+    
+    border: 2px solid #fff;
+    border-radius: 20px;
+
+    list-style-type:none;
+
+    background: linear-gradient(rgba(255,255,255,.6), rgba(255,255,255,.6));
+}
+    .itemSelector{
+         padding:20px 0px 20px 5px;
+         border-bottom:#FFF solid 5px;
+
+    }
+        .itemTab{
+            display:inline;
+            border: #000 solid 2px;
+            border-radius: 15px 15px 5px 5px;
+            background-color:#FFF;
+            
+            margin: 0px 5px 0px 2px;
+            padding:10px;
+        
+            transition: border .15s;
+
+            
+        }
+
+            .itemTab:hover{
+                border-color: #3498db;
+                cursor: pointer;
+                
+            }
+
+            .selectedItem{
+                padding-top: 1.8vh;
+                background-color: #3498db;
+                border-color: #000;
+                cursor:default;
+                font-weight:bold;
+                color:#FFF;
+            }
+
+    .searchBar{
+        margin: 1% 1%;
+        width:40%;
+        display:inline;
+        padding: 10px;
+        display:block;
+        border-radius:20px;
+        outline:none;
+        border: 2px solid black;
+        border-radius:20px;
+        font-size:100%;
+    }   
+        .searchBar:hover,.searchBar:focus{  
+            border-color: #6e7a81;
+        }
+
+
+.button{
+    width:100px;
+    height:40px;
+    display:block;
+    border-radius:20px;
+    background-color:#FFF;
+    margin:1% 1%;
+    width:40%;
+}
+.button:hover{
+    background-color: #3498db;
+    color:#FFF;
+}
+    

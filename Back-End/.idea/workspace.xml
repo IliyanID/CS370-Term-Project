@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0c8d36c7-cf2d-41fb-9b79-745615e013c3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RestfulServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RestfulServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/build/static/js/2.cebfaaca.chunk.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/build/static/js/2.cebfaaca.chunk.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/build/static/js/3.7378626f.chunk.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/build/static/js/3.7378626f.chunk.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/build/static/js/main.3d9e867b.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/build/static/js/main.3d9e867b.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RestfulServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RestfulServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/build/static/js/2.cebfaaca.chunk.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/build/static/js/2.cebfaaca.chunk.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/build/static/js/3.7378626f.chunk.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/build/static/js/3.7378626f.chunk.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/build/static/js/main.3d9e867b.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/build/static/js/main.3d9e867b.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/public/logo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/public/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/Components/InventoryItem/InventoryItem.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/Components/InventoryItem/InventoryItem.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/Components/LogInBox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/Components/LoginBox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/Containers/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/Containers/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/Containers/LoggedIn.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/Containers/LoggedIn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/Context/authContext.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/Context/userContext.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/java/RestfulServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/java/Server/RestfulServer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/logback.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/asset-manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/logo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/static/css/main.4b1c8829.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/static/css/main.4b1c8829.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/static/js/2.a92df526.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/static/js/2.a92df526.chunk.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/static/js/2.a92df526.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/static/js/3.03c9da03.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/static/js/3.03c9da03.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/static/js/main.53bcef7f.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/static/js/main.53bcef7f.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/static/js/runtime-main.7e5655a5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/static/js/runtime-main.7e5655a5.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/static/media/869.b71ed6d5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/static/media/r1.cf7900e0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/resources/869.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/resources/r1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/resources/r2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/resources/r3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/resources/r4.jpg" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1lOAiMlVMdeIfyrRhL3eYrJqlVd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Iliyan\Documents\GitHub\CS370-Term-Project\Back-End\src\main" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="RestfulServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="RestfulServer" />
+      <module name="Back-End" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.RestfulServer" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0c8d36c7-cf2d-41fb-9b79-745615e013c3" name="Default Changelist" comment="" />
+      <created>1607457890155</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607457890155</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1607473140192">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607473140192" />
+    <state width="1877" height="149" key="GridCell.Tab.0.bottom" timestamp="1607488990880">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="149" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607488990880" />
+    <state width="1877" height="149" key="GridCell.Tab.0.center" timestamp="1607488990879">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="149" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607488990879" />
+    <state width="1877" height="149" key="GridCell.Tab.0.left" timestamp="1607488990879">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="149" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607488990879" />
+    <state width="1877" height="149" key="GridCell.Tab.0.right" timestamp="1607488990879">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="149" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607488990879" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/RestfulServer.java</url>
+          <line>62</line>
+          <properties class="RestfulServer" method="authenticateUser">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
