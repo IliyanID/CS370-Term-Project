@@ -3,28 +3,33 @@ SETUP CONTAINER COMMUNICATION
 (Create Network)
 Docker create network myNetwork
 
+
 (Access a Container)
 url:[container name]
 port:[exposed container port]
 -------------------------------------------------------------------------------------------------------------------------------
 MYSQL DATABASE SETUP
 
-(Create Container)
-docker run -e MYSQL_ROOT_PASSWORD=password --network-myNetwork --name=database -d -p 127.0.0.1:3306:3306 mysql:latest
+(Create/Start Container)
+docker run -e MYSQL_ROOT_PASSWORD=password --network myNetwork --name=database -d -p 127.0.0.1:3306:3306 mysql:latest
 
 
-(Start Container)
+(Connect to Container)
 mysql -uroot -ppassword -h 127.0.0.1 -P3306
 
 
 (Connect externally to Database)
 url:127.0.0.1
 port 3306
+username:root
+password:password
 
 
 (Connect Internally to Database)
 url:database
 port 3306
+username:root
+password:password
 
 -------------------------------------------------------------------------------------------------------------------------------
 JAVA SERVER SETUP
@@ -32,8 +37,10 @@ JAVA SERVER SETUP
 (Create Container)
 docker build -t spring-boot-app:latest .
 
+
 (Start Container)
 docker run -d  -p80:80 --network myNetwork --name rest-server spring-boot-app:latest
+
 
 (Connect to server)
 http://localhost
