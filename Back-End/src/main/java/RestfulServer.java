@@ -81,12 +81,20 @@ public class RestfulServer
 
         JSONObject authenticated = new JSONObject();
         boolean verified = false;
+<<<<<<< HEAD
 
         try {
             ResultSet users = queryDB("SELECT credentials.Password FROM database.credentials WHERE credentials.Username=\"" + user + "\";");
             System.out.println("printing results: ");
             if (users.next()) {
                 String storedpass = users.getString("Password");
+=======
+        ResultSet users = queryDB("SELECT credentials.Password FROM database.users WHERE credentials.Usernames=\"" + user + "\";");
+        try {
+            System.out.println("printing results: ");
+            if (users.next()) {
+                String storedpass = users.getString(1);
+>>>>>>> 42324a1ad86ae36e1caa6e03cf62808cc7a5c219
                 if (pass.equals(storedpass))
                     verified = true;
             } else {
@@ -95,8 +103,15 @@ public class RestfulServer
         } catch (Exception throwables) {
             throwables.printStackTrace();
         }
+<<<<<<< HEAD
 
 
+=======
+        
+        if(user != null && pass != null)
+            if(user.equals("admin") && pass.equals("password"))
+            verified = true;
+>>>>>>> 42324a1ad86ae36e1caa6e03cf62808cc7a5c219
 
 
 
@@ -104,7 +119,6 @@ public class RestfulServer
         authenticated.put("userToken",user);
         return authenticated;
     }
-
 
 
 
@@ -119,6 +133,7 @@ public class RestfulServer
 
 
         JSONArray allInventory = new JSONArray();
+<<<<<<< HEAD
         ResultSet inventory = null;
         try{
         if(index == null) {
@@ -127,6 +142,27 @@ public class RestfulServer
         }
         else {
             inventory = queryDB("SELECT inventory.description, inventory.id, inventory.url FROM database.inventory WHERE inventory.username='" + user + "' AND inventory.id='" + index + "';");
+=======
+        ResultSet inventory;
+        if(index==null) {
+            inventory = queryDB("SELECT inventory.description, inventory.id, inventory.url FROM database.inventory WHERE inventory.username='" + user + "';");
+        }
+        else {
+            inventory = queryDB("SELECT inventory.description, inventory.id, inventory.url FROM database.inventory WHERE inventory.username='" + user + "' AND inventory.id='" + index + "';");
+        }
+        try {
+            while (inventory.next()) {
+                JSONObject item = new JSONObject();
+                item.put("description", inventory.getString("description"));
+                item.put("id",inventory.getString("id"));
+                item.put("displayed",false);
+                item.put("url",inventory.getString("imageurl"));
+                allInventory.put(item);
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+>>>>>>> 42324a1ad86ae36e1caa6e03cf62808cc7a5c219
         }
 
             while (inventory.next()) {
