@@ -14,7 +14,7 @@ import static spark.Spark.*;
 
 import org.json.*;
 
-import java.util.Scanner;
+
 
 
 public class RestfulServer
@@ -32,9 +32,9 @@ public class RestfulServer
 
     private void configureRestfulApiServer() {
         Spark.port(80);
-        System.out.println("Server configured to listen on port 8080");
+        System.out.println("Server configured to listen on port 80");
 
-        Spark.staticFileLocation("/static/build");
+        Spark.staticFileLocation("/public/build");
 
 
     }
@@ -47,10 +47,11 @@ public class RestfulServer
 
         //Get all Inventory for User
         get("/inventory", this::getInventory);
-        get("/inventory/:index",this::getInventory);
-        post("/inventory",this::addInventory);
-        put("/inventory",this::updateInventory);
-        //delete("/inventory/:index",this::deleteInventory);
+        get("/inventory/:user",this::getInventory);
+        get("/inventory/:user/:index",this::getInventory);
+        post("/inventory/:user",this::addInventory);
+        put("/inventory/:user",this::updateInventory);
+        delete("/inventory/:user/:id",this::deleteInventory);
 
         //api for usernames
         get("/username",this::getUser);
@@ -70,24 +71,37 @@ public class RestfulServer
         String pass = null;
         if(!request.body().equals("")) {
             JSONObject userCred = new JSONObject(request.body());
-             user = userCred.getString("username");
-             pass = userCred.getString("password");
+            user = userCred.getString("username");
+            pass = userCred.getString("password");
         }
-
+        System.out.println(request.body());
         System.out.println("Username: " + user);
         System.out.println("Password: " + pass);
 
 
         JSONObject authenticated = new JSONObject();
         boolean verified = false;
-        if(user != null && pass != null)
-            if(user.equals("admin") && pass.equals("password"))
-            verified = true;
+
+        try {
+            ResultSet users = queryDB("SELECT credentials.Password FROM database.credentials WHERE credentials.Username=\"" + user + "\";");
+            System.out.println("printing results: ");
+            if (users.next()) {
+                String storedpass = users.getString("Password");
+                if (pass.equals(storedpass))
+                    verified = true;
+            } else {
+                System.err.println("User " + user + " does not exist");
+            }
+        } catch (Exception throwables) {
+            throwables.printStackTrace();
+        }
+
+
 
 
 
         authenticated.put("authenticated",verified);
-        authenticated.put("userToken",0);
+        authenticated.put("userToken",user);
         return authenticated;
     }
 
@@ -99,35 +113,41 @@ public class RestfulServer
         response.header("Access-Control-Allow-Origin","*");
         response.status(200); //Success
 
-
+        String user = request.params("user");
         String index = request.params("index");
+        //System.out.println(user);
 
 
         JSONArray allInventory = new JSONArray();
-        if(index == null)
-        for(int i = 0; i< 20;i++)
-            {
-             JSONObject item = new JSONObject();
-             item.put("description","Name of Board and Components");
-             item.put("id",i);
-             item.put("displayed",false);
-              item.put("url","");
-               allInventory.put(item);
-            }
-        else{
-            JSONObject item = new JSONObject();
-            item.put("description","Name of Board and Components");
-            item.put("id",index);
-            item.put("displayed",false);
-            item.put("url","");
-            allInventory.put(item);
+        ResultSet inventory = null;
+        try{
+        if(index == null) {
+            inventory = queryDB("SELECT inventory.description, inventory.id, inventory.url FROM database.inventory WHERE inventory.username='"+ user +"';");
+            //System.out.println("Got here");
         }
+        else {
+            inventory = queryDB("SELECT inventory.description, inventory.id, inventory.url FROM database.inventory WHERE inventory.username='" + user + "' AND inventory.id='" + index + "';");
+        }
+
+            while (inventory.next()) {
+                JSONObject item = new JSONObject();
+                item.put("description", inventory.getString("description"));
+                item.put("id",inventory.getString("id"));
+                item.put("displayed",false);
+                item.put("url",inventory.getString("url"));
+                allInventory.put(item);
+            }
+
+
+        }catch(Exception e){e.printStackTrace();}
         return allInventory;
     }
     private JSONObject addInventory(Request request, Response response){
         response.type("application/json");
         response.header("Access-Control-Allow-Origin","*");
         response.status(200); //Success
+
+        System.out.println(request.body());
 
         String id=null,description=null,url=null,username=null;
         Boolean displayed=false;
@@ -136,7 +156,7 @@ public class RestfulServer
             id = userCred.getString("id");
             description = userCred.getString("description");
             url = userCred.getString("url");
-            username = userCred.getString("username");
+            username = request.params("user");
         }
 
         JSONObject success = new JSONObject();
@@ -190,7 +210,33 @@ public class RestfulServer
         }
         return success;
     }
+    private JSONObject deleteInventory(Request request, Response response){
+       // response.type("application/json");
+        response.header("Access-Control-Allow-Origin","*");
+        response.status(200); //Success
 
+        //DELETE FROM database.credentials WHERE ("Usernames" = "test");
+        String username = request.params("user");
+        String id = request.params("id");
+
+
+        JSONObject success = new JSONObject();
+        try{
+            queryDB( "SELECT inventory.id FROM database.inventory WHERE inventory.username=\"" + username + "\"");
+
+            queryDB("DELETE FROM `database`.`inventory` WHERE (`id` = '" + id + "');");
+            success.put("success",true);
+            success.put("idDeleted",id);
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            success.put("success",false);
+        }
+
+
+
+        return success;
+    }
 
 
     private JSONArray getUser(Request request,Response response){
@@ -214,10 +260,10 @@ public class RestfulServer
 
 
             try {
-                ResultSet users =  queryDB( "SELECT credentials.Usernames,credentials.Password FROM database.credentials");
+                ResultSet users =  queryDB( "SELECT credentials.Username,credentials.Password FROM database.credentials");
                 while(users.next()){
                     JSONObject user = new JSONObject();
-                    user.put("Username", users.getString("Usernames"));
+                    user.put("Username", users.getString("Username"));
                     user.put("Password", users.getString("Password"));
                     allUsers.put(user);
                 }
@@ -229,11 +275,11 @@ public class RestfulServer
         else{
 
             try {
-                ResultSet users =  queryDB( "SELECT credentials.Usernames,credentials.Password FROM database.credentials WHERE credentials.Usernames=\"" + username + "\"");
+                ResultSet users =  queryDB( "SELECT credentials.Username,credentials.Password FROM database.credentials WHERE credentials.Usernames=\"" + username + "\"");
                 if(users != null)
                 while(users.next()){
                     JSONObject user = new JSONObject();
-                    user.put("Username" , users.getString("Usernames"));
+                    user.put("Username" , users.getString("Username"));
                     user.put("Password" , users.getString("Password"));
                     allUsers.put(user);
                 }
@@ -263,7 +309,7 @@ public class RestfulServer
 
         JSONObject success = new JSONObject();
         try{
-            ResultSet users =  queryDB("INSERT INTO database.credentials (Usernames, Password) VALUES (\"" + user + "\", \"" + pass +"\")");
+            ResultSet users =  queryDB("INSERT INTO database.credentials (Username, Password) VALUES (\"" + user + "\", \"" + pass +"\")");
             success.put("success", true);
             success.put("Username", user);
             success.put("Password", pass);
@@ -291,7 +337,7 @@ public class RestfulServer
         JSONObject userUpdated = new JSONObject();
         try {
             //Checks to See if it's in database, if not it will error out
-            queryDB( "SELECT credentials.Usernames,credentials.Password FROM database.credentials WHERE credentials.Usernames=\"" + user + "\"");
+            queryDB( "SELECT credentials.Username,credentials.Password FROM database.credentials WHERE credentials.Usernames=\"" + user + "\"");
 
             //Updates selected users password
             queryDB("UPDATE `database`.`credentials` SET `Password` = '" + pass +"' WHERE (`Usernames` = '" + user +"');");
@@ -316,7 +362,7 @@ public class RestfulServer
         String username = request.params("user");
         JSONObject success = new JSONObject();
         try{
-            queryDB( "SELECT credentials.Usernames,credentials.Password FROM database.credentials WHERE credentials.Usernames=\"" + username + "\"");
+            queryDB( "SELECT credentials.Username,credentials.Password FROM database.credentials WHERE credentials.Usernames=\"" + username + "\"");
 
             queryDB("DELETE FROM `database`.`credentials` WHERE (`Usernames` = '" + username +"');");
             success.put("success",true);
