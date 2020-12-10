@@ -19,8 +19,92 @@ class App extends PureComponent{
     ],
     UserToken:{authenticated:false,userToken:""},
     currentSearch:[""],
-    inventory:[{}]
+    inventory:[{}],
+    createUserChecked:{checked: false,user:"",pass:""},
+    resetPasswordChecked:{checked: false,user:"",pass:""},
+    user:""
   }
+
+ 
+
+  deleteUser = () =>{
+    const Http = new XMLHttpRequest();
+    let url;
+    if(debug === true)
+        url = "http://10.0.0.108:80/username/"+ this.state.UserToken.userToken;
+    else
+        url = window.location.href + "username/" + this.state.UserToken.userToken;
+
+
+    Http.open("DELETE",url);
+   
+  
+    Http.send();
+    
+    Http.onreadystatechange = (e) => {
+        let result = JSON.parse(Http.response)
+        console.log(result)
+        if(result.success === true){
+          //alert(result.UserDeleted + " Deleted");
+          this.setState({UserToken:{authenticated:false,userToken:""}});
+        }
+        else
+          alert("User Was Not Deleted");
+        
+    }
+  }
+  createUser = () =>{
+    const Http = new XMLHttpRequest();
+    let url;
+    if(debug === true)
+        url = "http://10.0.0.108:80/username"
+    else
+        url = window.location.href + "username"
+
+
+    Http.open("POST",url);
+    let data = {username:this.state.createUserChecked.user,password:this.state.createUserChecked.pass};
+   // console.log(JSON.stringify(data));
+    Http.send(JSON.stringify(data));
+    
+    Http.onreadystatechange = (e) => {
+        let result = JSON.parse(Http.response)
+        console.log(result)
+        if(result.success === true){
+          //alert("User Created");
+          this.setState({createUserChecked:{checked:false,user:"",pass:""}});
+        }
+        else
+          alert("User Was Not Created");
+        
+    }
+  }
+
+  changeUser = () =>{
+    const Http = new XMLHttpRequest();
+    let url;
+    if(debug === true)
+        url = "http://10.0.0.108:80/username" 
+    else
+        url = window.location.href + "username" 
+    //console.log(this.state.user);
+
+    Http.open("PUT",url);
+    let data = {username:this.state.resetPasswordChecked.user,password:this.state.resetPasswordChecked.pass};
+   console.log("Change User JSON\n" + JSON.stringify(data));
+    Http.send(JSON.stringify(data));
+    
+    Http.onreadystatechange = (e) => {
+      let result = JSON.parse(Http.response);
+      console.log(result);
+      if(result.success === true){
+        //alert("User Password Changed");
+        this.setState({resetPasswordChecked:{checked:false,user:"",pass:""}});
+    }
+    else
+      alert("User Password Not Changed");
+  }
+}
 
   authenticateUser = (logout) =>{
     let url = document.URL + "user";
@@ -28,7 +112,7 @@ class App extends PureComponent{
       url = "http://10.0.0.108:80/user"
       console.log("Entered authenticateUser");
     }
-    console.log(url);
+   // console.log(url);
 
       const Http = new XMLHttpRequest();
       Http.open("POST", url);
@@ -39,7 +123,7 @@ class App extends PureComponent{
       
       Http.onreadystatechange = (e) => {
         let result = JSON.parse(Http.response);
-        console.log(result.authenticated);
+        console.log(result);
         if(result.authenticated === true || logout === true || debug === true){
           this.setState({UserToken:JSON.parse(Http.response),
           userCredentials:["",""],
@@ -49,13 +133,15 @@ class App extends PureComponent{
             {name: "Item", classes: "itemTab"}
             ],
             currentSearch:[""]});
-        console.log(JSON.parse(Http.response));
+       // console.log(JSON.parse(Http.response));
         }
       }
     Http.send(JSON.stringify(cred));
     
 
   }
+
+
   
  
 
@@ -92,6 +178,11 @@ class App extends PureComponent{
       console.log("Current Search: " + this.state.currentSearch);
   }
 
+  createUserUpdate = (checked,user,pass) =>{
+    this.setState({resetPasswordChecked:{checked:checked,user:user ,pass:pass}}); 
+    this.setState({user:user});
+  }
+
   render(){
   
     let item = null
@@ -104,7 +195,8 @@ class App extends PureComponent{
           tabs : this.state.tabs,
           currentSearch : this.state.currentSearch,
           UserToken: this.state.UserToken,
-          inventory:this.state.inventory}}>
+          inventory:this.state.inventory,
+          deleteUser:this.deleteUser}}>
               
             <LoggedIn/>
 
@@ -114,8 +206,18 @@ class App extends PureComponent{
       item = (
         <AuthContext.Provider value = {
           {authenticated : this.state.UserToken.authenticated,
+          creds:this.state.userCredentials,
           updateCred : this.updateCred,
-          authenticateUser : this.authenticateUser}}>
+          authenticateUser : this.authenticateUser,
+          createUserChecked: this.state.createUserChecked,
+          resetPasswordChecked: this.state.resetPasswordChecked,
+          updateUser : this.changeUser,
+          setUpdateChecked:this.createUserUpdate,
+          getUpdatUser:this.state.resetPasswordChecked,
+          createUser: this.createUser,
+          getCreateUser:this.state.createUserChecked,
+          setCreateChecked:(checked, user, pass) =>{ this.setState({createUserChecked:{checked:checked,user:user,pass:pass}});}
+          }}>
             
             <LoginBox/> 
 

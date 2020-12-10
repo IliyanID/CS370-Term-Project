@@ -9,7 +9,6 @@ const InventoryItem = (props) =>{
     if (props.type === "addItem"){
         imageClass = "addItemImage";
         desClass = "addItemDes";
-        console.log("Got here");
     }
     return(
         <li className="item">

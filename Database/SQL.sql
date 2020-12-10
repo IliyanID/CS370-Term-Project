@@ -38,7 +38,7 @@ CREATE TABLE `credentials` (
 
 LOCK TABLES `credentials` WRITE;
 /*!40000 ALTER TABLE `credentials` DISABLE KEYS */;
-INSERT INTO `credentials` VALUES ('admin','password'),('person','dummyass'),('person1','dummyass'),('person2','dummyass'),('person3','dummyass');
+INSERT INTO `credentials` VALUES ('admin','password');
 /*!40000 ALTER TABLE `credentials` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -66,13 +66,9 @@ CREATE TABLE `inventory` (
 
 LOCK TABLES `inventory` WRITE;
 /*!40000 ALTER TABLE `inventory` DISABLE KEYS */;
-INSERT INTO `inventory` VALUES (15,'1','This is a description','http','false','admin'),(16,'2','This is a description','http','false','admin'),(17,'3','This is a description','http','false','admin'),(18,'4','This is a description','http','false','admin'),(19,'5','This is a description','http','false','admin'),(21,'7','This is a description','http','false','admin');
+INSERT INTO `inventory` VALUES (15,'1','This is a description','http','false','admin');
 /*!40000 ALTER TABLE `inventory` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Dumping events for database 'database'
---
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -83,4 +79,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-12-08 20:08:57
+-- Dump completed on 2020-12-10  4:27:04

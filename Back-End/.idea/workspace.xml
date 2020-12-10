@@ -27,66 +27,32 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/RestfulServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RestfulServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/build/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/public/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/build/static/js/2.cebfaaca.chunk.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/build/static/js/2.cebfaaca.chunk.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/build/static/js/3.7378626f.chunk.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/build/static/js/3.7378626f.chunk.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/build/static/js/main.3d9e867b.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/build/static/js/main.3d9e867b.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/build/static/css/main.7a16d1db.chunk.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/build/static/css/main.7a16d1db.chunk.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/build/static/js/2.cebfaaca.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/build/static/js/2.cebfaaca.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/build/static/js/2.cebfaaca.chunk.js.LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/build/static/js/2.cebfaaca.chunk.js.LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/build/static/js/3.7378626f.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/build/static/js/3.7378626f.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/build/static/js/main.7671cd45.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/build/static/js/main.7671cd45.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/build/static/js/runtime-main.1ba4226e.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/build/static/js/runtime-main.1ba4226e.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TD-Circuit-Boards-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/TD-Circuit-Boards-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/TD-Circuit-Boards-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/TD-Circuit-Boards-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/RestfulServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RestfulServer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/public/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/build/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/public/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/build/static/js/2.cebfaaca.chunk.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/build/static/js/2.cebfaaca.chunk.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/build/static/js/3.7378626f.chunk.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/build/static/js/3.7378626f.chunk.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/build/static/js/main.3d9e867b.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/build/static/js/main.3d9e867b.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/public/logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/public/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/Components/InventoryItem/InventoryItem.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/Components/InventoryItem/InventoryItem.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/Components/LogInBox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/Components/LoginBox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/Containers/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/Containers/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/Containers/LoggedIn.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/Containers/LoggedIn.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/Context/authContext.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/Context/userContext.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/java/RestfulServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/java/Server/RestfulServer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/logback.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/asset-manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/static/css/main.4b1c8829.chunk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/static/css/main.4b1c8829.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/static/js/2.a92df526.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/static/js/2.a92df526.chunk.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/static/js/2.a92df526.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/static/js/3.03c9da03.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/static/js/3.03c9da03.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/static/js/main.53bcef7f.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/static/js/main.53bcef7f.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/static/js/runtime-main.7e5655a5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/static/js/runtime-main.7e5655a5.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/static/media/869.b71ed6d5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/main/resources/static/build/static/media/r1.cf7900e0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/reportWebVitals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/resources/869.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/resources/r1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/resources/r2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/resources/r3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source Code/src/resources/r4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/build/static/css/main.7a16d1db.chunk.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/build/static/css/main.7a16d1db.chunk.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/build/static/js/2.cebfaaca.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/build/static/js/2.cebfaaca.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/build/static/js/2.cebfaaca.chunk.js.LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/build/static/js/2.cebfaaca.chunk.js.LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/build/static/js/3.7378626f.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/build/static/js/3.7378626f.chunk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/build/static/js/main.7671cd45.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/build/static/js/main.7671cd45.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/build/static/js/runtime-main.1ba4226e.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/build/static/js/runtime-main.1ba4226e.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source-Code/src/Components/LoginBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Front-End/Source-Code/src/Components/LoginBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-End/Source-Code/src/Containers/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Front-End/Source-Code/src/Containers/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Kubernets_Docker/TD-Circuit-Boards-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../Kubernets_Docker/TD-Circuit-Boards-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Kubernets_Docker/deploy.yaml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,21 +134,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607473140192" />
-    <state width="1877" height="149" key="GridCell.Tab.0.bottom" timestamp="1607488990880">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1458" height="134" key="GridCell.Tab.0.bottom" timestamp="1607598353898">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
+    <state width="1458" height="134" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1607598353898" />
     <state width="1877" height="149" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607488990880" />
-    <state width="1877" height="149" key="GridCell.Tab.0.center" timestamp="1607488990879">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1458" height="134" key="GridCell.Tab.0.center" timestamp="1607598353898">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
+    <state width="1458" height="134" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1607598353898" />
     <state width="1877" height="149" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607488990879" />
-    <state width="1877" height="149" key="GridCell.Tab.0.left" timestamp="1607488990879">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1458" height="134" key="GridCell.Tab.0.left" timestamp="1607598353898">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
+    <state width="1458" height="134" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1607598353898" />
     <state width="1877" height="149" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607488990879" />
-    <state width="1877" height="149" key="GridCell.Tab.0.right" timestamp="1607488990879">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1458" height="134" key="GridCell.Tab.0.right" timestamp="1607598353898">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
+    <state width="1458" height="134" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1607598353898" />
     <state width="1877" height="149" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607488990879" />
   </component>
   <component name="XDebuggerManager">
@@ -190,11 +160,24 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/RestfulServer.java</url>
-          <line>62</line>
+          <line>61</line>
           <properties class="RestfulServer" method="authenticateUser">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/RestfulServer.java</url>
+          <line>323</line>
+          <properties class="RestfulServer" method="updateUser">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/RestfulServer.java</url>
+          <line>390</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

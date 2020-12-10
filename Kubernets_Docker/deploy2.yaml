@@ -1,0 +1,19 @@
+---
+ apiVersion: v1
+ kind: Pod
+ metadata:
+   name: site
+   labels:
+     app: web
+ spec:
+   containers:
+     - name: server
+       image: iliyanid2000/cs370-inventory-rest-server:latest
+       imagePullPolicy: Always
+       ports:
+         - containerPort: 80
+     - name: database
+       image: iliyanid2000/cs370-inventory-database:latest
+       imagePullPolicy: Always
+       ports:
+         - containerPort: 3306        

@@ -19,7 +19,7 @@ import org.json.*;
 
 public class RestfulServer
 {
-    final static boolean debug = false;
+    final static boolean debug = true;
     private final Logger log = LoggerFactory.getLogger(RestfulServer.class);
 
     public RestfulServer()
@@ -46,7 +46,6 @@ public class RestfulServer
         post("/user", this::authenticateUser);
 
         //Get all Inventory for User
-        get("/inventory", this::getInventory);
         get("/inventory/:user",this::getInventory);
         get("/inventory/:user/:index",this::getInventory);
         post("/inventory/:user",this::addInventory);
@@ -74,9 +73,9 @@ public class RestfulServer
             user = userCred.getString("username");
             pass = userCred.getString("password");
         }
-        System.out.println(request.body());
-        System.out.println("Username: " + user);
-        System.out.println("Password: " + pass);
+        //System.out.println(request.body());
+        //System.out.println("Username: " + user);
+       // System.out.println("Password: " + pass);
 
 
         JSONObject authenticated = new JSONObject();
@@ -84,14 +83,12 @@ public class RestfulServer
 
         try {
             ResultSet users = queryDB("SELECT credentials.Password FROM database.credentials WHERE credentials.Username=\"" + user + "\";");
-            System.out.println("printing results: ");
+           // System.out.println("printing results: ");
             if (users.next()) {
                 String storedpass = users.getString("Password");
                 if (pass.equals(storedpass))
                     verified = true;
-                    System.out.println("true");
-            } else {
-                System.err.println("User " + user + " does not exist");
+                    //System.out.println("true");
             }
         } catch (Exception throwables) {
             throwables.printStackTrace();
@@ -147,7 +144,7 @@ public class RestfulServer
         response.header("Access-Control-Allow-Origin","*");
         response.status(200); //Success
 
-        System.out.println(request.body());
+        log.info(request.body());
 
         String id=null,description=null,url=null,username=null;
         Boolean displayed=false;
@@ -179,6 +176,8 @@ public class RestfulServer
         response.type("application/json");
         response.header("Access-Control-Allow-Origin","*");
         response.status(200); //Success
+
+        log.info(request.body());
 
         String id=null,description=null,url=null,username=null;
         Boolean displayed=false;
@@ -299,6 +298,8 @@ public class RestfulServer
         response.header("Access-Control-Allow-Origin","*");
         response.status(200); //Success
 
+        log.info(request.body());
+
         String user = null;
         String pass = null;
         if(!request.body().equals("")) {
@@ -325,6 +326,8 @@ public class RestfulServer
         response.header("Access-Control-Allow-Origin","*");
         response.status(200); //Success
 
+        log.info(request.body());
+
         String user = null;
         String pass = null;
         if(!request.body().equals("")) {
@@ -337,10 +340,10 @@ public class RestfulServer
         JSONObject userUpdated = new JSONObject();
         try {
             //Checks to See if it's in database, if not it will error out
-            queryDB( "SELECT credentials.Username,credentials.Password FROM database.credentials WHERE credentials.Usernames=\"" + user + "\"");
+            queryDB( "SELECT credentials.Username,credentials.Password FROM database.credentials WHERE credentials.Username=\"" + user + "\"");
 
             //Updates selected users password
-            queryDB("UPDATE `database`.`credentials` SET `Password` = '" + pass +"' WHERE (`Usernames` = '" + user +"');");
+            queryDB("UPDATE `database`.`credentials` SET `Password` = '" + pass +"' WHERE (`Username` = '" + user +"');");
 
 
             userUpdated.put("success", true);
@@ -348,6 +351,7 @@ public class RestfulServer
             userUpdated.put("ModifiedPass", pass);
         }
         catch(Exception e){
+            e.printStackTrace();
             userUpdated.put("success",false);
         }
         return userUpdated;
@@ -362,14 +366,17 @@ public class RestfulServer
         String username = request.params("user");
         JSONObject success = new JSONObject();
         try{
-            queryDB( "SELECT credentials.Username,credentials.Password FROM database.credentials WHERE credentials.Usernames=\"" + username + "\"");
+            queryDB( "SELECT credentials.Username,credentials.Password FROM database.credentials WHERE credentials.Username=\"" + username + "\"");
 
-            queryDB("DELETE FROM `database`.`credentials` WHERE (`Usernames` = '" + username +"');");
+            queryDB("DELETE FROM `database`.`credentials` WHERE (`Username` = '" + username +"');");
+            queryDB("DELETE FROM `database`.`inventory` WHERE (`username` = '" + username + "');");
+            //DELETE FROM `database`.`inventory` WHERE (`key` = '26');
             success.put("success",true);
             success.put("UserDeleted",username);
         }
         catch(Exception e){
             success.put("success",false);
+            e.printStackTrace();
         }
 
 
@@ -381,7 +388,9 @@ public class RestfulServer
 
 
     private ResultSet queryDB(String query)throws Exception{
-        String url = "jdbc:mysql://database:3306/database";
+        String url = "jdbc:mysql://localhost:3306/database";
+        if(debug)
+            url = "jdbc:mysql://35.239.126.136:3306/database";
         String dbuser = "root";
         String dbpass = "password";
         ResultSet results = null;

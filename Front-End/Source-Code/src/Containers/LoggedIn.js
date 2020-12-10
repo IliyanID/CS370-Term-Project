@@ -44,19 +44,20 @@ const LoggedIn = (props) =>{
         else
             url = window.location.href + "inventory/" + userContext.UserToken.userToken;
 
-        console.log(url);
+        //console.log(url);
         Http.open("GET",url);
         Http.send();
         
         Http.onreadystatechange = (e) => {
-          console.log(JSON.parse(Http.response)[22]);
+         
           let temp = JSON.parse(Http.response);
+          console.log(temp);
           let result = [];
           for(let i = 0; temp[i] !== undefined; i++){
               result.push(temp[i]);
           }
          setCount(result)
-         console.log(count);
+        // console.log(count);
         }
     }
 
@@ -71,12 +72,16 @@ const LoggedIn = (props) =>{
 
         Http.open("POST",url);
         let data = {id:addItem.id, description:addItem.description, displayed:false, url:"http"};
-       // console.log(JSON.stringify(data));
+
         Http.send(JSON.stringify(data));
         
         Http.onreadystatechange = (e) => {
-            alert("Inventory Added");
-            setUpdate(!update);
+            let result = JSON.parse(Http.response);
+            console.log(result);
+            if(result.success === true)
+             setUpdate(!update);
+            else
+                alert("Inventory not added");
         }
     }
 
@@ -87,23 +92,10 @@ const LoggedIn = (props) =>{
         else
             url = window.location.href  + "inventory/" + userContext.UserToken.userToken + "/" + id;
 
-        //const Http = new XMLHttpRequest();
-        //let url = "http://10.0.0.108:80/inventory/" + userContext.UserToken.userToken + "/" + id;
-        // Http.open("DELETE",url);
-       
-        // Http.send();
-        // console.log("Remove URL: " + url);
-        // Http.onreadystatechange = (e) => {
-        //     console.log("got to remove");
-        //     console.log(Http.response);
-        //     setUpdate(true);
-        // }
-
         return fetch(url, {
             method: 'delete'
           }).then(response =>
             response.json().then(json => {
-                alert("Inventory Removed");
                 setUpdate(!update);
                
               return json;
@@ -123,7 +115,7 @@ const LoggedIn = (props) =>{
                 
                 if(index == item.id && item.displayed == false)
                 {
-                    console.log(item.id);
+                    //console.log(item.id);
                     item.displayed = true;
                     return <InventoryItem description={item.description} id={item.id} key={item.id}/>;
                 }
@@ -194,7 +186,7 @@ const LoggedIn = (props) =>{
         <Fragment>
             <ul className="header">
                 <li className="headerTitle" >Inventory</li>
-                <li className="headerProfile" >Profile</li>
+                <li className="headerProfile" onClick={userContext.deleteUser}>Delete Account</li>
             </ul>
             {itemArea}   
         </Fragment>
