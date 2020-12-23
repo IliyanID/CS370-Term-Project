@@ -24,35 +24,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0c8d36c7-cf2d-41fb-9b79-745615e013c3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RestfulServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RestfulServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/build/static/css/main.7a16d1db.chunk.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/build/static/css/main.7a16d1db.chunk.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/build/static/js/2.cebfaaca.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/build/static/js/2.cebfaaca.chunk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/build/static/js/2.cebfaaca.chunk.js.LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/build/static/js/2.cebfaaca.chunk.js.LICENSE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/build/static/js/3.7378626f.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/build/static/js/3.7378626f.chunk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/build/static/js/main.7671cd45.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/build/static/js/main.7671cd45.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/build/static/js/runtime-main.1ba4226e.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/build/static/js/runtime-main.1ba4226e.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TD-Circuit-Boards-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/TD-Circuit-Boards-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/TD-Circuit-Boards-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/TD-Circuit-Boards-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RestfulServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RestfulServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/build/static/css/main.7a16d1db.chunk.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/build/static/css/main.7a16d1db.chunk.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/build/static/js/2.cebfaaca.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/build/static/js/2.cebfaaca.chunk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/build/static/js/2.cebfaaca.chunk.js.LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/build/static/js/2.cebfaaca.chunk.js.LICENSE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/build/static/js/3.7378626f.chunk.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/build/static/js/3.7378626f.chunk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/build/static/js/main.7671cd45.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/build/static/js/main.7671cd45.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/build/static/js/runtime-main.1ba4226e.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/build/static/js/runtime-main.1ba4226e.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source-Code/src/Components/LoginBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Front-End/Source-Code/src/Components/LoginBox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Front-End/Source-Code/src/Containers/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Front-End/Source-Code/src/Containers/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Kubernets_Docker/TD-Circuit-Boards-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../Kubernets_Docker/TD-Circuit-Boards-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Kubernets_Docker/deploy.yaml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
