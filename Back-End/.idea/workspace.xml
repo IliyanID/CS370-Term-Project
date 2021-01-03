@@ -22,9 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c8d36c7-cf2d-41fb-9b79-745615e013c3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0c8d36c7-cf2d-41fb-9b79-745615e013c3" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,9 +99,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1607473140192">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="578" y="253" key="FileChooserDialogImpl" timestamp="1609653239137">
+      <screen x="0" y="0" width="1500" height="960" />
     </state>
+    <state x="578" y="253" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1609653239137" />
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607473140192" />
     <state width="1458" height="134" key="GridCell.Tab.0.bottom" timestamp="1607598353898">
       <screen x="0" y="0" width="1500" height="960" />
