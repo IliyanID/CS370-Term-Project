@@ -1,9 +1,9 @@
 <h1 align="center"><a href="http://kazhuu.com/" target="_blank"/>Inventory Managment</a></h1>
-<p align="center">An inventory management website that supports the creation modification, and deletion of inventory. Also supports multiple users.</p>
+<p align="center">An inventory management website that supports the creation modification, and deletion of inventory as well as supporting multiple users. Application is built on top of Java Spark, React, and mySQL. Website and database are run separately in Docker Containers. The Docker Containers are run inside a Kubernets Cluster</p>
 
 ![demo](https://raw.githubusercontent.com/IliyanID/Inventory-Managment/master/Resources/font-page.PNG)
 
-## 🖱️ REST API URL Paths
+## 🖱️ REST API Documentation
 
 * User Manipulation
    * Get Specefic User Credentials: ```GET www.kazhuu.com/username/[USERNAME]```
