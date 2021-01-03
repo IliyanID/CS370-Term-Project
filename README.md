@@ -1,2 +1,5 @@
-<h1 align="center">Iventory Managment</h1>
-Inventory manager with multi-user support utilizing Docker and REST api
+<h1 align="center"><a href="kazhuu.com" target="_blank"/>Inventory Managment</a></h1>
+
+![demo](https://raw.githubusercontent.com/IliyanID/Inventory-Managment/master/Resources/font-page.PNG)
+
+
